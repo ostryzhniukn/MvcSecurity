@@ -1,16 +1,14 @@
 CREATE TABLE users (
-  username varchar(45) NOT NULL,
+  username varchar(45) PRIMARY KEY,
   password varchar(450) NOT NULL,
-  enabled bit(1) NOT NULL DEFAULT 1,
-  PRIMARY KEY (username)
+  enabled bit(1) NOT NULL DEFAULT '1'
 );
 
 CREATE TABLE user_roles (
-  user_role_id int(11) NOT NULL AUTO_INCREMENT,
+  user_role_id int(11) PRIMARY KEY AUTO_INCREMENT,
   username varchar(45) NOT NULL,
   ROLE varchar(45) NOT NULL,
-  PRIMARY KEY (user_role_id),
-  UNIQUE KEY uni_username_role (ROLE,username),
+  UNIQUE KEY uni_username_role (ROLE, username),
   CONSTRAINT fk_username FOREIGN KEY (username) REFERENCES users (username)
 );
 
