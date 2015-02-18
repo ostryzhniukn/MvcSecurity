@@ -2,11 +2,14 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
-    <title>User Page | www.beingjavaguys.com</title>
+<title>User Page | www.beingjavaguys.com</title>
 </head>
 <body>
-    <c:url value="/j_spring_security_logout" var="logoutUrl" />
-    <h2>User | You are now logged in</h2>
-    <h3><a href="${logoutUrl}">Logout</a></h3>
+<c:url value="/j_spring_security_logout" var="logoutUrl" />
+	<center>
+		<br /> <br /> <br />
+		<h2>User | You are now logged in</h2>
+		<h3><a href="${logoutUrl}">Logout</a></h3>
+	</center>
 </body>
 </html>
